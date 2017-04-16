@@ -1,0 +1,53 @@
+<!Doctype html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <title>图片浏览器</title>
+        <!--<link rel="stylesheet" href="static/css/style.css"/>-->
+        <style>
+            html,body{ height:100%;  }
+            body{ margin:0;  }
+            #view{ width:100%; height:100%;overflow: hidden;}
+            #wrap{  position: relative; left: 0; height:100%;  background:rgba(0,0,0,0.6); overflow: hidden; transition:left 1s;}
+            #wrap div{position:relative;float:left;height: 100%;overflow: hidden;}
+            #wrap img{  position:absolute; height:auto; cursor:-webkit-grab;transition:transform .4s,opacity 1.5s; transform-origin: center center;}
+            #wrap .grab{cursor:-webkit-grabbing;}
+            #options{  position:fixed;  bottom: 0; left: 50%; min-width: 370px;  padding:15px 20px;  margin-left: -185px;  background:#fff; color: #75818f; }
+            .opt_wrap{  float:left;  }
+            #options button{  width:20px;  height:20px;  padding: 0;  outline: none;  background: #fff; cursor:pointer; }
+            #options .opt_wrap{  font-size: 12px;  }
+            #options .scale{  border:1px solid #75818f;  border-radius:100%;  cursor:pointer;}
+            #options .scale_wrap .skip{ font-size: 14px;margin-right:10px; color: #75818f;}
+            #options .fit{ width:60px;}
+            .scale_num{ display: inline-block; width: 50px; text-align: center; }
+            #options .skip{  border:none;  font-size: 16px;  }
+            .link_wrap{  margin-left: 30px;  }
+        </style>
+<style>
+</style>
+    </head>
+    <body>
+        <div id="view">
+            <div id="wrap">
+            </div>
+        </div>
+        <div id="options">
+            <div class="opt_wrap scale_wrap">
+                <button id="origin" class="skip">1:1</button>
+                <button id="fit" class="skip fit">适应窗口</button>
+                <button id="s_minus" class="scale">-</button>
+                <span id="percent" class="scale_num">100%</span>
+                <button id="s_add" class="scale">+</button>
+            </div>
+            <div class="opt_wrap link_wrap">
+                <button id="prev" class="skip">&lt</button>
+                <span id="ratio" class="scale_num">1/1</span>
+                <button id="next" class="skip">&gt</button>
+            </div>
+        </div>
+        <div id="airscape">
+
+        </div>
+    <script src="static/js/main.js"></script>
+    </body>
+</html>

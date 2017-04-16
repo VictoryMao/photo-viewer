@@ -1,0 +1,14 @@
+html,body{ height:100%;  }
+body{ margin:0;  }
+#wrap{    height:100%;  background:rgba(0,0,0,0.6); overflow: hidden; }
+#wrap img{  position:relative;  top:50%;  height:auto; cursor:-webkit-grab;transition:transform .7s; transform-origin: center center;}
+#wrap .grab{cursor:-webkit-grabbing;}
+#options{  position:fixed;  bottom: 0; left: 50%;  padding:15px 20px;  margin-left: -108px;  background:#fff;  }
+.opt_wrap{  float:left;  }
+#options{ color: #75818f;}
+#options button{  width:20px;  height:20px;  padding: 0;  outline: none;  background: #fff; cursor:pointer; }
+#options .opt_wrap{ font-size: 12px;  }
+#options .scale{  border:1px solid #75818f;  border-radius:100%;  cursor:pointer;}
+.scale_num{ display: inline-block; width: 50px; text-align: center; }
+#options .skip{  border:none;  font-size: 16px;  }
+.link_wrap{  margin-left: 30px;  }
